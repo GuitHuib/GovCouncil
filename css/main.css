@@ -1,0 +1,116 @@
+/* global */
+body {
+    background-color: rgb(250, 249, 246);
+}
+ul {
+    list-style: none;
+}
+.underline {
+    text-decoration: underline;
+}
+.centered {
+    margin: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    max-width: 1200px;
+    margin: auto;
+}
+.flex-container {
+    display: flex;
+}
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+/* header */
+.navbar img {
+    height: 75px;
+    width: auto;
+}
+/* landing page */
+.jumbotron {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/images/state_house.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.pop-out {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 800px;
+    padding: 50px;
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.pop-out h2 {
+    margin: auto;
+}
+@keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+}
+.info {
+    margin: 10rem 3rem;
+    /* background-image: linear-gradient(to bottom right,rgba(255,0,0,0), rgba(219, 134, 48, 1)); */
+}
+.divider {
+    border-bottom: 0.5px solid black;
+    margin: auto;
+    width: 90%;
+}
+/* about */
+.info-card {
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 15px;
+    margin-bottom: 3rem;
+}
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 25px;
+}
+.img-md {
+    display: flex;
+    margin: auto;
+    max-height: 200px;
+}
+
+/* footer */
+.footer {
+    background-color: #212529;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 2rem 1rem;
+}
+/* Media queries */
+@media (max-width: 500px) {
+    .pop-out {
+        margin: 20px;
+    }
+    .info {
+        margin: 10rem 1rem;
+    }
+  }
