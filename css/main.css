@@ -1,6 +1,6 @@
 /* global */
 body {
-    background-color: rgb(250, 249, 246);
+    /* background-color: rgb(250, 249, 246); */
 }
 ul {
     list-style: none;
@@ -8,15 +8,21 @@ ul {
 .underline {
     text-decoration: underline;
 }
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
 .centered {
-    margin: auto;
+    text-align: center;
 }
 .content {
     display: flex;
     flex-direction: column;
     min-height: 85vh;
     max-width: 1200px;
-    margin: auto;
+    margin: 3rem auto;
 }
 .flex-container {
     display: flex;
@@ -27,6 +33,15 @@ ul {
     align-items: center;
     justify-content: center;
     margin: 25px;
+}
+.list-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+}
+.list-group {
+    display: flex;
+    flex-direction: column;
 }
 /* header */
 .navbar img {
@@ -52,7 +67,7 @@ ul {
 }
 .pop-out {
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;;
+    border-radius: 5px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -64,14 +79,14 @@ ul {
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.pop-out h2 {
-    margin: auto;
-}
 @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
 }
 .info {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
     margin: 10rem 3rem;
     /* background-image: linear-gradient(to bottom right,rgba(255,0,0,0), rgba(219, 134, 48, 1)); */
 }
@@ -80,11 +95,14 @@ ul {
     margin: auto;
     width: 90%;
 }
+.decorated li {
+    list-style: circle;
+}
 /* about */
 .info-card {
     display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 15px;
+    /* box-shadow: 5px 5px 15px; */
     margin-bottom: 3rem;
 }
 .inner-card {
@@ -92,6 +110,8 @@ ul {
     flex-direction: column;
     margin: auto;
     padding: 25px;
+    align-items: center;
+    max-width: 1100px;
 }
 .img-md {
     display: flex;
@@ -107,10 +127,22 @@ ul {
 }
 /* Media queries */
 @media (max-width: 500px) {
+    .jumbotron {
+        height: auto;
+    }
     .pop-out {
-        margin: 20px;
+        margin: 5px;
+        margin-bottom: 20px;
+        padding: 20px;
     }
     .info {
-        margin: 10rem 1rem;
+        margin: 3rem 1rem;
+        font-size: 1rem;
+    }
+    .inner-card {
+        padding: 8px;
+    }
+    .list-container {
+        flex-direction: column;
     }
   }
